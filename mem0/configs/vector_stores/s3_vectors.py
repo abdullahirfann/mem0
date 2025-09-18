@@ -4,7 +4,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class S3VectorsConfig(BaseModel):
-    vector_bucket_name: str = Field(description="Name of the S3 Vector bucket")
+    collection_name: str = Field(description="Name of the S3 Vector bucket")
     index_name: str = Field("mem0", description="Name of the vector index")
     embedding_model_dims: int = Field(
         1536, description="Dimension of the embedding vector"
